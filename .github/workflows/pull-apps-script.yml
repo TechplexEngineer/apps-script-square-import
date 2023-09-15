@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Backup latest Apps Script Code
 
 on:
   push:

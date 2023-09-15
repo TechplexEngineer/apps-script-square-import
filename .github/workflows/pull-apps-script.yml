@@ -15,7 +15,7 @@ jobs:
 
       - name: restore clasp.json
         run: |
-          echo '${{ secrets.CLASP }}' | jq ". + {rootDir: \"$(pwd)\"}"
+          echo '${{ secrets.CLASP }}' | jq ". + {rootDir: \"$(pwd)\"}" > .clasp.json
         
       - run: npx @google/clasp pull
 

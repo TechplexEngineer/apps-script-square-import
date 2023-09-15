@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out this repo
+        uses: actions/checkout@v2
+
       - name: restore clasprc.json secret
         run: echo '${{ secrets.CLASPRC }}' > ~/.clasprc.json
 

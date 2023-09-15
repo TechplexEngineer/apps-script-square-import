@@ -13,7 +13,7 @@ jobs:
       - name: restore clasp secret
         run: echo ${{ secrets.CMASPRC }} > ~/.clasprc.json
         
-      - run: npx clasp pull
+      - run: npx @google/clasp pull
 
       - name: Commit and push if it changed
         run: |

@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: restore clasprc.json secret
-        run: echo "${{ secrets.CLASPRC }}" > ~/.clasprc.json
+        run: echo '${{ secrets.CLASPRC }}' > ~/.clasprc.json
 
       - name: restore clasp.json
         run: |
-          echo "${{ secrets.CLASP }}" | jq ". + {rootDir: \"$(pwd)\"}"
+          echo '${{ secrets.CLASP }}' | jq ". + {rootDir: \"$(pwd)\"}"
         
       - run: npx @google/clasp pull
 

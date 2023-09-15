@@ -1,0 +1,28 @@
+name: Node.js Package
+
+on:
+  push:
+  schedule:
+    - cron:  '10 */2 * * *'
+    # “At minute 10 past every 2 hours.”
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: restore clasp secret
+        run: echo ${{ secrets.CMASPRC }} > ~/.clasprc.json
+        
+      - run: npx clasp pull
+
+      - name: Commit and push if it changed
+        run: |
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Latest code: $(date -u)" || exit 0
+          git push
+      
+      - if: always()
+        run: rm -rf ~/.clasprc.json
+

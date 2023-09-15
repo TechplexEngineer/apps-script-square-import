@@ -26,8 +26,8 @@ function getPayments(startDate) {
 // Sample Output
 /*
 {
-  "PAYMENT_+ID_REDACTED": {
-    "id": "PAYMENT_+ID_REDACTED",
+  "10Bc1YhxVMzDR0zJBE52CHCMhcIZY": {
+    "id": "10Bc1YhxVMzDR0zJBE52CHCMhcIZY",
     "created_at": "2023-09-12T12:01:27.345Z",
     "updated_at": "2023-09-12T12:01:31.699Z",
     "amount_money": {
@@ -40,7 +40,14 @@ function getPayments(startDate) {
     "card_details": {
       "status": "CAPTURED",
       "card": {
-        <REDACTED>
+        "card_brand": "MASTERCARD",
+        "last_4": "6025",
+        "exp_month": 6,
+        "exp_year": 2026,
+        "fingerprint": "sq-1-yAaqK8_WTwlZnljlTU7UBbDRYs44Obn6bD5EX8-TxecRuc8x2pUzPwBhr6nbwqOkqA",
+        "card_type": "DEBIT",
+        "prepaid_type": "NOT_PREPAID",
+        "bin": "526913"
       },
       "entry_method": "KEYED",
       "cvv_status": "CVV_ACCEPTED",
@@ -52,9 +59,9 @@ function getPayments(startDate) {
         "captured_at": "2023-09-12T12:01:28.489Z"
       }
     },
-    "location_id": "<LOCATION ID>",
-    "order_id": "<ORDER ID>",
-    "reference_id": "<REF ID>",
+    "location_id": "LP96G97G7C0QC",
+    "order_id": "cHs4FKte7K8xutf7hTmvhJDafRQZY",
+    "reference_id": "1222789686",
     "risk_evaluation": {
       "created_at": "2023-09-12T12:03:30.754Z",
       "risk_level": "NORMAL"
@@ -69,21 +76,21 @@ function getPayments(startDate) {
         }
       }
     ],
-    "buyer_email_address": "<Email>",
+    "buyer_email_address": "katie@littletonrobotics.org",
     "billing_address": {
       "postal_code": "01460",
       "country": "US"
     },
     "shipping_address": {
-      "address_line_1": "<Address>",
-      "locality": "<TOWN>",
-      "administrative_district_level_1": "<STATE>",
-      "postal_code": "<ZIP CODE>",
+      "address_line_1": "8 Colburn Lane",
+      "locality": "Littleton",
+      "administrative_district_level_1": "MA",
+      "postal_code": "01460",
       "country": "US",
-      "first_name": "FIRST",
-      "last_name": "LAST"
+      "first_name": "Katie",
+      "last_name": "Bonner"
     },
-    "customer_id": "<CUSTOMER ID>",
+    "customer_id": "8M23T3ETHN1NV3SQEB1YNJHVR8",
     "total_money": {
       "amount": 17500,
       "currency": "USD"
@@ -93,14 +100,14 @@ function getPayments(startDate) {
       "currency": "USD"
     },
     "receipt_number": "10Bc",
-    "receipt_url": "https://squareup.com/receipt/preview/<ID>",
+    "receipt_url": "https://squareup.com/receipt/preview/10Bc1YhxVMzDR0zJBE52CHCMhcIZY",
     "delay_action": "CANCEL",
     "delayed_until": "2023-09-19T12:01:27.345Z",
     "application_details": {
       "square_product": "ECOMMERCE_API",
-      "application_id": "<APP ID>"
+      "application_id": "sq0idp-w46nJ_NCNDMSOywaCY0mwA"
     },
-    "version_token": "<VERSION ID>"
+    "version_token": "1p3tktOqsNJmWdGpFLqtf8y1ywiCXOTJ7mBTcErjFLP6o"
   },
 }
 */

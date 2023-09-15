@@ -98,7 +98,7 @@ function getOrdersGql(startDate) {
 /*
 [
   {
-    "id": "<ORDER ID>",
+    "id": "cHs4FKte7K8xutf7hT.........",
     "lineItems": [
       {
         "name": "Team Registration - Second Robot",
@@ -110,14 +110,14 @@ function getOrdersGql(startDate) {
       }
     ],
     "customer": {
-      "id": "<CUSTOMER ID>",
-      "emailAddress": "<EMAIL>",
-      "familyName": "<FIRST>",
-      "givenName": "<LAST>"
+      "id": "8M23T3ETHN1NV3SQEB...",
+      "emailAddress": "email@email.coom",
+      "familyName": "First",
+      "givenName": "Last"
     },
     "tenders": [
       {
-        "paymentId": "<PAYMENT ID>"
+        "paymentId": "10Bc1YhxVMzDR0zJBE52....."
       }
     ]
   },

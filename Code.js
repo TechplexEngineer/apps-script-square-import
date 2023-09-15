@@ -18,8 +18,6 @@ function UpdateData() {
 
   const orders = combineOrdersPayments(ordersRaw, paymentsMap);
 
-  
-
   if (true) {
     const debug = [["Order"]];
     for (const order of orders) {
@@ -41,6 +39,8 @@ function UpdateData() {
 }
 
 function readCell(sheetName, cellAddress) {
+  // const sheetName = 'Sheet1'; // Replace with your sheet name
+  // const cellAddress = 'A1'; // Replace with your cell address
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = spreadsheet.getSheetByName(sheetName);
   const cell = sheet.getRange(cellAddress);

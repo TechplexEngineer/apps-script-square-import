@@ -13,6 +13,7 @@ function combineOrdersPayments(orders, paymentsMap) {
     const res = Object.assign({}, order) 
 
     res.processingFee = res.tenders.reduce((total, tender)=>{
+      // console.log(total, tender.paymentId, paymentsMap[tender.paymentId].processing_fee)
       total += paymentsMap[tender.paymentId].processing_fee?.reduce((feeTotal, feeObj) => {
         feeTotal += feeObj.amount_money.amount
         return feeTotal;

@@ -10,8 +10,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: restore clasp secret
-        run: echo ${{ secrets.CMASPRC }} > ~/.clasprc.json
+      - name: restore clasprc.json secret
+        run: echo ${{ secrets.CLASPRC }} > ~/.clasprc.json
+
+      - name: restore clasp.json
+        run: |
+          echo ${{ secrets.CLASP }} | jq ". + {rootDir: \"$(pwd)\"}"
         
       - run: npx @google/clasp pull
 
@@ -24,5 +28,5 @@ jobs:
           git push
       
       - if: always()
-        run: rm -rf ~/.clasprc.json
+        run: rm -rf ~/.clasprc.json clasp.json
 
